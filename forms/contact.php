@@ -1,35 +1,60 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'firsthopetechnologies@gmail.com';
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $subject = htmlspecialchars($_POST['subject']);
+    $message = htmlspecialchars($_POST['message']);
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
+    // Initialize PHPMailer
+    $mail = new PHPMailer(true);
+    
+    try {
+        // Server settings
+        $mail->isSMTP();                                       // Send using SMTP
+        $mail->Host = 'smtp.gmail.com';                         // Set the SMTP server to send through
+        $mail->SMTPAuth = true;                                // Enable SMTP authentication
+        $mail->Username = 'firsthopetechnologies@gmail.com';   // SMTP username
+        $mail->Password = 'Info@2024';                          // SMTP password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;    // Enable TLS encryption
+        $mail->Port = 587;                                     // TCP port to connect to
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
+        // Recipients - Sending to admin
+        $mail->setFrom('firsthopetechnologies@gmail.com', 'https://firsthopetechnologies.com/');
+        $mail->addAddress('https://firsthopetechnologies.com/', 'First Hope Technologies');       // Add admin email
+        
+        // Content for admin
+        $mail->isHTML(true);                                   // Set email format to HTML
+        $mail->Subject = "New Contact Form Submission: " . $subject;
+        $mail->Body    = "You have received a new query from your website contact form.<br><br>" .
+                         "<strong>Name:</strong> $name<br>" .
+                         "<strong>Email:</strong> $email<br>" .
+                         "<strong>Subject:</strong> $subject<br>" .
+                         "<strong>Message:</strong><br>$message";
 
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
+        $mail->send();
 
-  echo $contact->send();
+        // Send confirmation to the user
+        $mail->clearAddresses();                               // Clear admin email
+        $mail->addAddress($email, $name);                      // User's email
+        
+        // Content for user
+        $mail->Subject = "Thank you for contacting us!";
+        $mail->Body    = "Dear $name,<br><br>" .
+                         "Thank you for reaching out. We have received your message and will get back to you shortly.<br><br>" .
+                         "<strong>Your Message:</strong><br>$message";
+
+        $mail->send();
+
+        echo json_encode(['message' => 'Your message has been sent successfully.']);
+    } catch (Exception $e) {
+        echo json_encode(['error' => "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"]);
+    }
+}
 ?>
