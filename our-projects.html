@@ -6,8 +6,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>First Hope</title>
-  <meta content="First Hope" name="description">
-  <meta content="First Hope" name="keywords">
+  <meta content="First Hope Powering Innovation" name="description">
+  <meta content="First Hope Powering Innovation" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/fevicon.png" rel="icon">
@@ -26,6 +26,131 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    .realestate-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+  
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: calc(33.33% - 20px);
+      box-sizing: border-box;
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+  
+    .card:hover {
+      transform: scale(1.03);
+    }
+  
+    .property-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+  
+    .price-tag {
+      background-color: black;
+      color: white;
+      padding: 5px 10px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  
+    .card-body {
+      padding: 15px;
+    }
+  
+    .property-type {
+      font-size: 14px;
+      color: #666;
+    }
+  
+    .property-title {
+      font-weight: bold;
+      font-size: 18px;
+      margin: 5px 0;
+    }
+  
+    .property-location {
+      color: #888;
+      font-size: 14px;
+    }
+  
+    .btn-details {
+      background-color: white;
+      border: 1px solid #007bff;
+      color: #007bff;
+      padding: 8px 12px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  
+    .btn-details:hover {
+      background-color: #007bff;
+      color: white;
+    }
+  
+    @media (max-width: 992px) {
+      .card {
+        width: calc(50% - 20px);
+      }
+    }
+  
+    @media (max-width: 576px) {
+      .card {
+        width: 100%;
+      }
+    }
+
+    .video-container {
+      position: relative;
+      width: 400px;
+      height: 280px;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+    }
+
+    .play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 50px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      padding: 10px 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .play-icon:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -40,11 +165,12 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="https://firsthopetechnologies.com/">Home</a></li>
-          <li><a class="nav-link scrollto" href="https://firsthopetechnologies.com/#about">About</a></li>
-          <li class="dropdown"><a class="active" href="https://firsthopetechnologies.com/#services"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Our Work</a></li>
+          <li class="dropdown"><a class="nav-link scrollto"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a class="nav-link" href="graphics-design.html">Graphic Design</a></li>
+              <li><a href="graphics-design.html">Graphic Design</a></li>
               <li class="dropdown"><a href="digital-marketing.html"><span>Digital Marketing</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="social-media.html">Social Marketing</a></li>
@@ -54,13 +180,11 @@
                   <li><a href="PR-promotion.html">Promotions PR</a></li>
                 </ul>
               </li>
-              <li><a class="active" href="website-design.html">Website Design</a></li>
+              <li><a href="website-design.html">Website Design</a></li>
               <li><a href="website-development.html">Website Development</a></li>
             </ul>
           </li>
-          <!-- <li><a class="nav-link scrollto " href="#stockmarketing">Stock</a></li> -->
-          <li><a class="nav-link scrollto" href="our-work.html">Our Work</a></li>
-          <li><a class="nav-link scrollto" href="https://firsthopetechnologies.com/#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li><a class="getstarted scrollto" href="real-estate.html">Real Estate</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -76,9 +200,9 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Our Projects</h2>
+          <h2>Projects</h2>
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="https://firsthopetechnologies.com/">Home</a></li>
             <li>Our Projects</li>
           </ol>
         </div>
@@ -86,13 +210,200 @@
       </div>
     </section><!-- End Breadcrumbs -->
 
-    <section class="inner-page">
+    <!-- ======= Services Section ======= -->
+    <section id="team" class="services">
       <div class="container">
-        <p>
-          *** Page Under Construction ***
-        </p>
+        <div class="section-title">
+          <h2>Our Projects</h2>
+          <p>Our company specializes in diverse sectors, excelling in Real Estate with comprehensive property solutions, Digital Marketing to boost online presence, Stock Trading with insightful investment advice, and Flour Production, delivering high-quality products. We are committed to excellence across all our projects.</p>
+        </div>
+
+        <div class="container">
+          <div class="col-xl-12">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row text-center mb-3">
+                <h3><b>Real Estate Projects</b></h3>
+              </div>
+        
+              <div class="realestate-row" id="real-estate-cards">
+                <!-- Cards will be dynamically inserted here -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          const properties = [
+            {
+              image: "assets/img/project1.jpg", // Replace with real image URL
+              // price: "₹ 2.93 Cr",
+              // type: "Villa",
+              title: "Project-1",
+              // location: "Mokila, Hyderabad",
+              detailsLink: "project1-detail.html"
+            },
+            {
+              image: "assets/img/project2.jpg",
+              // price: "₹ 59.90 Lac",
+              // type: "Flats & Apartments",
+              title: "Project-2",
+              // location: "Sahastradhara",
+              detailsLink: "project2-detail.html"
+            },
+            {
+              image: "assets/img/project3.jpg",
+              // price: "₹ 34 Lac",
+              // type: "Flats & Apartments",
+              title: "Project-3",
+              // location: "Sector 5, Dharuhera",
+              detailsLink: "project3-detail.html"
+            },
+            {
+              image: "assets/img/project4.jpg",
+              // price: "₹ 85 Lac",
+              // type: "Individual Houses",
+              title: "Project-4",
+              // location: "KTJ Nagar, Davanagere",
+              detailsLink: "project4-detail.html"
+            }
+          ];
+        
+          function createCard(property) {
+            return `
+              <div class="card">
+                <div style="position: relative;">
+                  <img src="${property.image}" alt="Property Image" class="property-img" />
+                  <!---<div class="price-tag">${property.price}</div>---->
+                </div>
+                <div class="card-body">
+                  <!---<div class="property-type">${property.type}</div>--->
+                  <div class="property-title">${property.title}</div>
+                  <!---<div class="property-location">${property.location}</div>--->
+                  <a href="${property.detailsLink}" class="btn-details">View Details</a>
+                </div>
+              </div>
+            `;
+          }
+        
+          function renderCards() {
+            const container = document.getElementById("real-estate-cards");
+            properties.forEach(property => {
+              container.innerHTML += createCard(property);
+            });
+          }
+        
+          // Render the cards on page load
+          window.onload = renderCards;
+        </script>
+        
+        </div>        
+
+        </div>
+
       </div>
-    </section>
+    </section><!-- End Services Section -->
+    
+    <section id="counts" class="counts section-bg">
+      <div class="container">      
+        <!-- Section 2: Content on the left, Image on the right -->
+        <div class="row">            
+          <div class="row text-center mb-3">
+            <h3><b>Stock Trading</b></h3>
+          </div>          
+          <div class="content col-xl-5 d-flex flex-column justify-content-center">
+            <img src="assets/img/trading.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-xl-7">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <p>
+                  <b>Provide high-quality products</b>
+                  <ul>
+                    <li><b>Stock Investments in the Indian Market:</b> We offer expert guidance and strategies for making informed investments in the Indian stock market.</li>
+                    <li><b>Option Trading (NSE and BSE):</b> We have knowledge on option trading for both the National Stock Exchange (NSE) and the Bombay Stock Exchange (BSE).</li>
+                    <li><b>Crypto Knowledge in Delta Exchange:</b> Gain insights and knowledge about cryptocurrency trading on Delta Exchange.</li>
+                    <li><b>Demat Account Opening at Any Exchange:</b> We assist with opening Demat accounts at any exchange, ensuring a smooth and hassle-free process.</li>
+                    <li><b>Investment in SIP and Mutual Funds:</b> Explore investment opportunities in Systematic Investment Plans (SIP) and Mutual Funds with our expert advice.</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+        </div>
+        </section>
+
+    <section class="counts">
+      <div class="container">      
+            <!-- Section 2: Content on the left, Image on the right -->
+            <div class="row">            
+              <div class="row text-center mb-3">
+                <h3><b>Production</b></h3>
+              </div>
+              <div class="col-xl-7">
+                <div class="icon-boxes d-flex flex-column justify-content-center">
+                  <div class="row">
+                    <p>
+                      <b>Flour mill production</b>
+                      <ul>
+                        <li><b>Preparing wheat:</b> Weighing, inspecting, and grading wheat.</li>
+                        <li><b>Cleaning:</b> Removing dirt, stones, metals, and other seeds.</li>
+                        <li><b>Tempering:</b> Soaking wheat in water to remove the bran layer.</li>
+                        <li><b>Gristing:</b> Mixing different types of wheat to create a specific flour.</li>
+                        <li><b>Milling:</b> Breaking wheat into smaller pieces using rollers, then sifting to separate flour from bran and other coarse particles.</li>
+                        <li><b>Blending:</b> Combining different flours, such as white flour and wheat bran, to create new flours.</li>
+                        <li><b>Enriching and fortifying:</b> Adding vitamins and minerals as required by government regulations.</li>
+                      </ul>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="content col-xl-5 d-flex flex-column justify-content-center">
+                <div class="video-container" style="position: relative;">
+                  <video id="myVideo" src="assets/img/flour-mill.mp4" style="width: 100%; cursor: pointer;"></video>
+                  <div class="play-icon" id="playButton" style="
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 50px;
+                    color: white;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    border-radius: 50%;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                  ">▶️</div>
+                </div>
+              
+                <script>
+                  const video = document.getElementById('myVideo');
+                  const playButton = document.getElementById('playButton');
+              
+                  // Function to toggle play/pause
+                  function togglePlayPause() {
+                    if (video.paused) {
+                      video.play();
+                      playButton.classList.add('hidden'); // Hide play icon when playing
+                    } else {
+                      video.pause();
+                      playButton.classList.remove('hidden'); // Show play icon when paused
+                    }
+                  }
+              
+                  // Click event for both video and play icon
+                  playButton.addEventListener('click', togglePlayPause);
+                  video.addEventListener('click', togglePlayPause);
+              
+                  // Show play icon again when the video ends
+                  video.addEventListener('ended', () => {
+                    playButton.classList.remove('hidden');
+                  });
+                </script>
+              </div>
+            </div>
+        </div>
+      </section>
 
   </main><!-- End #main -->
 
@@ -152,7 +463,7 @@
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>First Hope Technologies</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>First Hope</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
           Designed by <a href="#">In House IT</a>
