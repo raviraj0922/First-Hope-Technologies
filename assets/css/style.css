@@ -728,7 +728,7 @@ section {
 }
 
 .services .iconbox-blue i {
-  color: #035900;
+  color: #00A7A9;
 }
 
 .services .iconbox-blue:hover .icon i {
@@ -736,11 +736,11 @@ section {
 }
 
 .services .iconbox-blue:hover .icon path {
-  fill: #035900;
+  fill: #00A7A9;
 }
 
 .services .iconbox-orange i {
-  color: #452604;
+  color: #C03E8D;
 }
 
 .services .iconbox-orange:hover .icon i {
@@ -748,11 +748,11 @@ section {
 }
 
 .services .iconbox-orange:hover .icon path {
-  fill: #452604;
+  fill: #C03E8D;
 }
 
 .services .iconbox-pink i {
-  color: #035900;
+  color: #195D8F;
 }
 
 .services .iconbox-pink:hover .icon i {
@@ -760,11 +760,11 @@ section {
 }
 
 .services .iconbox-pink:hover .icon path {
-  fill: #035900;
+  fill: #195D8F;
 }
 
 .services .iconbox-teal i {
-  color: #452604;
+  color: #EBD163;
 }
 
 .services .iconbox-teal:hover .icon i {
@@ -772,7 +772,7 @@ section {
 }
 
 .services .iconbox-teal:hover .icon path {
-  fill: #454545;
+  fill: #EBD163;
 }
 
 /*--------------------------------------------------------------
