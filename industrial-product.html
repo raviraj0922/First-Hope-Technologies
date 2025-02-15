@@ -26,6 +26,36 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    .property-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .card-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    
+    .card-content {
+      margin-top: 10px;
+    }
+    
+    .btn-ready {
+      display: inline-block;
+      padding: 10px 15px;
+      background: #007bff;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    
+    .btn-ready:hover {
+      background: #0056b3;
+    }
+  </style>
 </head>
 
 <body>
@@ -40,17 +70,17 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="https://firsthope.in/#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="https://firsthope.in/#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="https://firsthope.in/#about">About</a></li>
           <li><a class="nav-link scrollto" href="https://firsthope.in/#services">Our Work</a></li>
-          <li class="dropdown"><a class="nav-link scrollto active"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a class="nav-link scrollto"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="graphics-design.html">Graphic Design</a></li>
-              <li class="dropdown"><a class="active" href="digital-marketing.html"><span>Digital Marketing</span> <i class="bi bi-chevron-right"></i></a>
+              <li class="dropdown"><a href="digital-marketing.html"><span>Digital Marketing</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="social-media.html">Social Marketing</a></li>
                   <li><a href="SEO-marketing.html">SEO and Marketing</a></li>
-                  <li><a class="active" href="whatsapp-marketing.html">WhatsApp Messaging</a></li>
+                  <li><a href="whatsapp-marketing.html">WhatsApp Messaging</a></li>
                   <li><a href="voice-call.html">Voice Calls</a></li>
                   <li><a href="PR-promotion.html">Promotions PR</a></li>
                 </ul>
@@ -75,23 +105,53 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Whatsapp Marketing</h2>
+          <h2>Industrial Products</h2>
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Whatsapp Marketing</li>
+            <li><a href="https://firsthopetechnologies.com/">Home</a></li>
+            <li>Industrial Products</li>
           </ol>
         </div>
 
       </div>
     </section><!-- End Breadcrumbs -->
 
-    <section class="inner-page">
-      <div class="container">
-        <p>
-          *** Page Under Construction ***
-        </p>
-      </div>
-    </section>
+    <section id="counts" class="counts section-bg">
+      <div class="container">      
+        <!-- Section 2: Content on the left, Image on the right -->
+        <div class="row">            
+          <div class="row text-center mb-3">
+            <h3><b>Production</b></h3>
+          </div> 
+          <div class="col-xl-7">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <p>
+                <b>Flour mill production</b>
+                <ul>
+                  <li><b>Preparing wheat:</b> Weighing, inspecting, and grading wheat.</li>
+                  <li><b>Cleaning:</b> Removing dirt, stones, metals, and other seeds.</li>
+                  <li><b>Tempering:</b> Soaking wheat in water to remove the bran layer.</li>
+                  <li><b>Gristing:</b> Mixing different types of wheat to create a specific flour.</li>
+                  <li><b>Milling:</b> Breaking wheat into smaller pieces using rollers, then sifting to separate flour from bran and other coarse particles.</li>
+                  <li><b>Blending:</b> Combining different flours, such as white flour and wheat bran, to create new flours.</li>
+                  <li><b>Enriching and fortifying:</b> Adding vitamins and minerals as required by government regulations.</li>
+                </ul>
+              </p>
+              </div>
+            </div>
+          </div>         
+          <div class="col-xl-5">
+            <div class="property-card">
+              <img src="assets/img/indust.jpg" class="card-img" alt="Property Sell">
+              <div class="card-content text-center">
+                <a href="production-mill.html" class="btn-ready">View Details</a>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+        </div>
+        </section>
 
   </main><!-- End #main -->
 

@@ -26,6 +26,50 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+.image-card {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Center content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-card p {
+  font-size: 2em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+.btn-details {
+      background-color: white;
+      border: 1px solid #035900;
+      color: #035900;
+      padding: 8px 12px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  
+    .btn-details:hover {
+      background-color: #035900;
+      color: white;
+    }
+</style>
 
 </head>
 
@@ -79,7 +123,7 @@
           <p class="mt-3">We offer a wide range of Digital Marketing, Stock Marketing Services and Real Estate. Our services include Production Facilities in flour mill and more.</p>
           <div class="mt-3">
             <a href="#about" class="btn-get-started scrollto">About</a>
-            <a href="our-projects.html" class="btn-get-quote">Our Projects</a>
+            <a href="#contact" class="btn-get-quote">Contact Us</a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img">
@@ -93,48 +137,44 @@
   <main id="main">
 
     <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts section-bg">
+    <section id="counts" class="counts section-bg"> 
       <div class="container">
-
         <div class="row text-center">
-          <h3>Fisrt Hope Offering strategic advice and support to optimize business processes and compliance.</h3>
-
-          <!-- <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Happy Clients</p>
-            </div>
+          <div class="section-title">
+          <h2>Our Projects</h2>
           </div>
-
+          <div class="col-lg-3 col-md-6">
+            <div class="image-card" style="background-image: url('assets/img/realestate.jpg');">
+              <p>Real Estate</p>
+            </div>
+            <a href="real-estate.html" class="btn-details">View Details</a>
+          </div>
+    
           <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-            <div class="count-box">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Projects</p>
+            <div class="image-card" style="background-image: url('assets/img/digitalmar.jpg');">
+              <p>Digital Marketing</p>
             </div>
+            <a href="digital-marketing.html" class="btn-details">View Details</a>
           </div>
-
+    
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hours Of Support</p>
+            <div class="image-card" style="background-image: url('assets/img/stocktrade.jpg');">
+              <p>Stock Trading</p>
             </div>
+            <a href="stock-trading.html" class="btn-details">View Details</a>
           </div>
-
+    
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hard Workers</p>
+            <div class="image-card" style="background-image: url('assets/img/industrial.jpg');">
+              <p>Industrial Products</p>
             </div>
-          </div> -->
-
+            <a href="industrial-product.html" class="btn-details">View Details</a>
+          </div>
+    
         </div>
-
       </div>
-    </section><!-- End Counts Section -->
+    </section>
+    <!-- End Counts Section -->
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -344,7 +384,7 @@
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p><b>Timetable:</b> From monday to friday from 9am to 12am and from 3pm to 8pm. Saturday from 8am to 8pm. Sunday closed.</p>
+          <p><b>Timetable:</b> From monday to friday from 9am to 7pm. Saturday from 9am to 3pm. Sunday closed.</p>
         </div>
 
         <div class="row">
@@ -363,7 +403,7 @@
                 <div class="info-box mt-4">
                   <i class="bx bx-envelope"></i>
                   <h3>Email Us</h3>
-                  <p>firsthope2022@gmail.com <br>contact@firsthopetechnologies.com</p>
+                  <p>firsthope2022@gmail.com <br>firsthopetechnologies@gmail.com</p>
                 </div>
               </div>
               <div class="col-md-6">

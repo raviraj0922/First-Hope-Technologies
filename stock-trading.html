@@ -150,51 +150,6 @@
     .hidden {
       display: none;
     }
-
-    .button-detail
-    {
-      display: flex;
-      justify-content: center;
-    }
-
-    .property-card {
-  background: #fff;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  padding: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.property-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.card-img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.card-content {
-  margin-top: 10px;
-}
-
-.btn-ready {
-  display: inline-block;
-  padding: 10px 15px;
-  background: #007bff;
-  color: #fff;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.btn-ready:hover {
-  background: #0056b3;
-}
   </style>
 </head>
 
@@ -230,7 +185,7 @@
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="https://firsthope.in/#contact">Contact</a></li>
-          <li><a class="getstarted scrollto active" href="real-estate.html">Real Estate</a></li>
+          <li><a class="getstarted scrollto" href="real-estate.html">Real Estate</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -245,129 +200,38 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Real Estate</h2>
+          <h2>Stock Trading</h2>
           <ol>
             <li><a href="https://firsthopetechnologies.com/">Home</a></li>
-            <li>Real Estate</li>
+            <li>Stock Trading</li>
           </ol>
         </div>
 
       </div>
     </section><!-- End Breadcrumbs -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="team" class="services">
-      <div class="container">
-        <div class="section-title">
-          <h2>Our Projects</h2>
-          <p>Our company specializes in diverse sectors, excelling in Real Estate with comprehensive property solutions, Digital Marketing to boost online presence, Stock Trading with insightful investment advice, and Flour Production, delivering high-quality products. We are committed to excellence across all our projects.</p>
-        </div>
-
-        <div class="container">
-          <div class="col-xl-12">
-            <div class="icon-boxes d-flex flex-column justify-content-center">
-              <div class="row text-center mb-3">
-                <h3><b>Real Estate Projects</b></h3>
-              </div>
-        
-              <div class="realestate-row" id="real-estate-cards">
-                <!-- Cards will be dynamically inserted here -->
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <script>
-          const properties = [
-            {
-              image: "assets/img/project1.jpg", // Replace with real image URL
-              // price: "₹ 2.93 Cr",
-              // type: "Villa",
-              title: "Project-1",
-              // location: "Mokila, Hyderabad",
-              detailsLink: "project1-detail.html"
-            },
-            {
-              image: "assets/img/project2.jpg",
-              // price: "₹ 59.90 Lac",
-              // type: "Flats & Apartments",
-              title: "Project-2",
-              // location: "Sahastradhara",
-              detailsLink: "project2-detail.html"
-            },
-            {
-              image: "assets/img/project3.jpg",
-              // price: "₹ 34 Lac",
-              // type: "Flats & Apartments",
-              title: "Project-3",
-              // location: "Sector 5, Dharuhera",
-              detailsLink: "project3-detail.html"
-            },
-            {
-              image: "assets/img/project4.jpg",
-              // price: "₹ 85 Lac",
-              // type: "Individual Houses",
-              title: "Project-4",
-              // location: "KTJ Nagar, Davanagere",
-              detailsLink: "project4-detail.html"
-            }
-          ];
-        
-          function createCard(property) {
-            return `
-              <div class="card">
-                <div style="position: relative;">
-                  <img src="${property.image}" alt="Property Image" class="property-img" />
-                  <!---<div class="price-tag">${property.price}</div>---->
-                </div>
-                <div class="card-body">
-                  <!---<div class="property-type">${property.type}</div>--->
-                  <div class="property-title">${property.title}</div>
-                  <!---<div class="property-location">${property.location}</div>--->
-                  <a href="${property.detailsLink}" class="btn-details">View Details</a>
-                </div>
-              </div>
-            `;
-          }
-        
-          function renderCards() {
-            const container = document.getElementById("real-estate-cards");
-            properties.forEach(property => {
-              container.innerHTML += createCard(property);
-            });
-          }
-        
-          // Render the cards on page load
-          window.onload = renderCards;
-        </script>
-        
-        </div>        
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
     
     <section id="counts" class="counts section-bg">
       <div class="container">      
         <!-- Section 2: Content on the left, Image on the right -->
         <div class="row">            
           <div class="row text-center mb-3">
-            <h3><b>Latest Properties for Sale / Rent</b></h3>
+            <h3><b>Stock Trading</b></h3>
           </div>          
-          <div class="col-xl-5">
-            <div class="property-card">
-              <img src="assets/img/propertysell.png" class="card-img" alt="Property Sell">
-              <div class="card-content">
-                <a href="ready-to-sell.html" class="btn-ready">View Details</a>
-              </div>
-            </div>
+          <div class="content col-xl-5 d-flex flex-column justify-content-center">
+            <img src="assets/img/trading.png" class="img-fluid" alt="">
           </div>
           <div class="col-xl-7">
             <div class="icon-boxes d-flex flex-column justify-content-center">
               <div class="row">
-                <p><p>A dynamic and versatile real estate company that is transforming the industry through cutting-edge innovation, unwavering transparency, and a strong focus on customer satisfaction. We are your reliable partner for all your real estate needs.</p>
-                <p>Our real estate organization is committed to leading with transparency, delivering service-oriented excellence, and instilling pride of ownership in every client. Our mission is to consistently provide exceptional real estate products and services, guided by integrity, innovation, and a customer-first mindset. We strive to foster trust and fulfill dreams.</p>
+                <p>
+                  <b>Provide high-quality products</b>
+                  <ul>
+                    <li><b>Stock Investments in the Indian Market:</b> We offer expert guidance and strategies for making informed investments in the Indian stock market.</li>
+                    <li><b>Option Trading (NSE and BSE):</b> We have knowledge on option trading for both the National Stock Exchange (NSE) and the Bombay Stock Exchange (BSE).</li>
+                    <li><b>Crypto Knowledge in Delta Exchange:</b> Gain insights and knowledge about cryptocurrency trading on Delta Exchange.</li>
+                    <li><b>Demat Account Opening at Any Exchange:</b> We assist with opening Demat accounts at any exchange, ensuring a smooth and hassle-free process.</li>
+                    <li><b>Investment in SIP and Mutual Funds:</b> Explore investment opportunities in Systematic Investment Plans (SIP) and Mutual Funds with our expert advice.</li>
+                  </ul>
                 </p>
               </div>
             </div>
@@ -377,39 +241,78 @@
         </div>
         </section>
 
-    <section class="counts">
-      <div class="container">      
-            <!-- Section 2: Content on the left, Image on the right -->
-            <div class="row">            
-              <div class="row text-center mb-3">
-                <h3><b>Send Your Property Ads for Free</b></h3>
-              </div>
-              <div class="col-xl-7">
-                <div class="icon-boxes d-flex flex-column justify-content-center">
-                  <div class="row">
-                    <p>
-                      <b>How It Works?</b>
-                      <p>We offers an easy process that helps list your property quickly and efficiently. This will ensure whether you want to rent your property online or sell it, can be done with ease through these simple steps given below:</p>
-                      <ul>
-                        <li><b>Post your Property Ad:</b> After logging in, Click on "Post Property" and enter all necessary details about your property such as locality name, amenities and upload the photos of the property.</li>
-                        <li><b>Access Responses Through Your Dashboard:</b> You can then monitor the responses in your dashboard and reach the contact details of interested buyers or tenants.</li>
-                        <li><b>Connect with Buyers/Tenants:</b> Negotiating with potential buyers or tenants is the final step. Connect directly with the interested buyer or tenants without any third party.</li>
-                      </ul>
-                    </p>
+        <!-- ======= Features Section ======= -->
+        <section id="services" class="services">
+          <div class="container">
+        
+            <div class="section-title">
+              <h2>How to Invest in Indian Stocks?</h2>
+            </div>
+        
+            <!-- Row for Cards -->
+            <div class="row">
+              <div class="col-lg-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon-box iconbox-blue">
+                  <div class="content align-items-center justify-content-center">
+                    <h4>Create a Demat Account</h4>
+                    <p>Sign up with your phone number and email to open a Demat account with any platform.</p>
                   </div>
                 </div>
               </div>
-              <div class="content col-xl-5">                
-                <div class="property-card">
-                  <img src="assets/img/QR-code.jpg" class="card-img" alt="Property Sell" style="width: 250px;">
-                  <div class="card-content">
-                    <p>Scan the QR code and send the details on WhatsApp</p>
+        
+              <div class="col-lg-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+                <div class="icon-box iconbox-orange">
+                  <div class="content align-items-center justify-content-center">
+                    <h4>Complete KYC</h4>
+                    <p>Confirm your identity with a quick Digital KYC process by uploading your PAN and Aadhaar details.</p>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="col-lg-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+                <div class="icon-box iconbox-pink">
+                  <div class="content align-items-center justify-content-center">
+                    <h4>Discover Stocks & ETFs</h4>
+                    <p>Browse from a selection of stocks and ETFs and pick your preferred choice.</p>
                   </div>
                 </div>
               </div>
             </div>
-        </div>
-      </section>
+        
+            <!-- Second Row -->
+            <div class="row mt-4">
+              <div class="col-lg-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon-box iconbox-teal">
+                  <div class="content align-items-center justify-content-center">
+                    <h4>Access Real-Time Updates</h4>
+                    <p>Receive free insights on your portfolio and the latest updates on markets from platfrom notifications.</p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-lg-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon-box iconbox-teal">
+                  <div class="content align-items-center justify-content-center">
+                    <h4>Add Funds & Invest</h4>
+                    <p>Put money into your Wallet and use those funds to purchase your chosen stock.</p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-lg-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon-box iconbox-teal">
+                  <div class="content align-items-center justify-content-center">
+                    <h4>Monitor & Track Investments</h4>
+                    <p>View your daily gains and losses and manage all your investments conveniently from your dashboard.</p>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Add more cards as needed -->
+            </div>
+        
+          </div>
+        </section><!-- End Features Section -->
 
   </main><!-- End #main -->
 

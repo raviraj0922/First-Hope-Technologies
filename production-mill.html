@@ -26,6 +26,65 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+      height: 460px; /* Fixed Height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
+  
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+  
+    .play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 50px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      padding: 10px 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s ease;
+    }
+  
+    .play-icon:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  
+    .hidden {
+      display: none;
+    }
+  
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .video-container {
+        max-width: 90%;
+        height: 400px; /* Adjusted for smaller screens */
+      }
+  
+      .play-icon {
+        font-size: 40px;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -34,23 +93,23 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <!-- <h1 class="logo"><a href="index.html">Resi.</a></h1> -->
+      <!-- <h1 class="logo"><a href="index.html">Logo</a></h1> -->
       <!-- Uncomment below if you prefer to use an image logo -->
       <a href="index.html" class="logo"><img src="assets/img/logo.jpg" alt="" class="img-fluid"></a>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="https://firsthope.in/#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="https://firsthope.in/#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="https://firsthope.in/#about">About</a></li>
           <li><a class="nav-link scrollto" href="https://firsthope.in/#services">Our Work</a></li>
-          <li class="dropdown"><a class="nav-link scrollto active"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a class="nav-link scrollto"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="graphics-design.html">Graphic Design</a></li>
-              <li class="dropdown"><a class="active" href="digital-marketing.html"><span>Digital Marketing</span> <i class="bi bi-chevron-right"></i></a>
+              <li class="dropdown"><a href="digital-marketing.html"><span>Digital Marketing</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="social-media.html">Social Marketing</a></li>
                   <li><a href="SEO-marketing.html">SEO and Marketing</a></li>
-                  <li><a class="active" href="whatsapp-marketing.html">WhatsApp Messaging</a></li>
+                  <li><a href="whatsapp-marketing.html">WhatsApp Messaging</a></li>
                   <li><a href="voice-call.html">Voice Calls</a></li>
                   <li><a href="PR-promotion.html">Promotions PR</a></li>
                 </ul>
@@ -71,27 +130,76 @@
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
-    <section class="breadcrumbs">
+    <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Whatsapp Marketing</h2>
+          <h2>Industrial Production</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li>Whatsapp Marketing</li>
+            <li>Industrial Production</li>
           </ol>
         </div>
 
       </div>
     </section><!-- End Breadcrumbs -->
 
-    <section class="inner-page">
-      <div class="container">
-        <p>
-          *** Page Under Construction ***
-        </p>
-      </div>
-    </section>
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container row">
+          <div class="col-lg-8">
+
+                <div class="content d-flex align-items-center" style="min-height: 100vh;">
+                  <div class="video-container">
+                    <video id="myVideo" src="assets/img/flour-mill.mp4"></video>
+                    <div class="play-icon" id="playButton">▶️</div>
+                  </div>
+                
+                  <script>
+                    const video = document.getElementById('myVideo');
+                    const playButton = document.getElementById('playButton');
+                
+                    function togglePlayPause() {
+                      if (video.paused) {
+                        video.play();
+                        playButton.classList.add('hidden');
+                      } else {
+                        video.pause();
+                        playButton.classList.remove('hidden');
+                      }
+                    }
+                
+                    playButton.addEventListener('click', togglePlayPause);
+                    video.addEventListener('click', togglePlayPause);
+                
+                    video.addEventListener('ended', () => {
+                      playButton.classList.remove('hidden');
+                    });
+                  </script>
+                </div>
+
+            </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Industrial Production</li>
+                <li><strong>Ongoing</strong>: Yes</li>
+                <li><strong>Project date</strong>: </li>
+                <li><strong>Location</strong>: Azamgarh</li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Flour Production</h2>
+              <p>
+                In the production of whole wheat flour, all parts of the kernel are used. In modern milling of refined flours the wheat kernels are cleaned and tempered by the addition or removal of moisture and then split open by a pair of rolls. The finest particles, called break flour, are sieved out and bagged.
+              </p>
+            </div>
+          </div>
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
 
   </main><!-- End #main -->
 
